@@ -1,0 +1,46 @@
+#include "push_swap.h"
+
+void	rra(t_stack **a)
+{
+	t_stack	*last;
+	t_stack	*prev;
+
+	if (!*a || !(*a)->next)
+		return ;
+	last = *a;
+	while (last->next)
+	{
+		prev = last;
+		last = last->next;
+	}
+	last->next = *a;
+	*a = last;
+	prev->next = NULL;
+	ft_putstr_fd("rra\n", 1);
+}
+
+void	rrb(t_stack **b)
+{
+	t_stack	*last;
+	t_stack	*prev;
+
+	if (!*b || !(*b)->next)
+		return ;
+	last = *b;
+	while (last->next)
+	{
+		prev = last;
+		last = last->next;
+	}
+	last->next = *b;
+	*b = last;
+	prev->next = NULL;
+	ft_putstr_fd("rrb\n", 1);
+}
+
+void	rrr(t_stack **a, t_stack **b)
+{
+	rra(a);
+	rrb(b);
+	ft_putstr_fd("rrr\n", 1);
+}
