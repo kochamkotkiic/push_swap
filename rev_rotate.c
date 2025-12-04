@@ -1,5 +1,9 @@
 #include "push_swap.h"
-
+// Shift down all elements of stack a by 1
+/*po petli last wskazuje na ostatni elem
+prev na przedosatni
+dajemy wskaznik ostatniego na poczatek
+nowym poczatkiem jest koniec*/
 void	rra(t_stack **a)
 {
 	t_stack	*last;
@@ -18,7 +22,7 @@ void	rra(t_stack **a)
 	prev->next = NULL;
 	ft_putstr_fd("rra\n", 1);
 }
-
+// Shift down all elements of stack b by 1
 void	rrb(t_stack **b)
 {
 	t_stack	*last;

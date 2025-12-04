@@ -6,7 +6,7 @@
 /*   By: emurbane <emurbane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 16:36:48 by emurbane          #+#    #+#             */
-/*   Updated: 2025/12/03 17:58:10 by emurbane         ###   ########.fr       */
+/*   Updated: 2025/12/04 16:17:23 by emurbane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ void	init_stack(t_stack **stack, int argc, char **argv)
 	}
 	index_stack(*stack);
 }
-
+//przypisujemy range(indeks) kazdeu elementowi
 void	index_stack(t_stack *stack)
 {
 	t_stack	*head;

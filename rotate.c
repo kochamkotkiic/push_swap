@@ -1,5 +1,8 @@
 #include "push_swap.h"
-
+//Shift up all elements of stack a by 1.
+/*nowy poczatek to drugi
+poczatek na koniec dajemy
+*/
 void	ra(t_stack **a)
 {
 	t_stack	*tmp;
@@ -14,7 +17,7 @@ void	ra(t_stack **a)
 	tmp->next = NULL;
 	ft_putstr_fd("ra\n", 1);
 }
-
+//Shift up all elements of stack b by 1
 void	rb(t_stack **b)
 {
 	t_stack	*tmp;
