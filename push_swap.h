@@ -6,7 +6,7 @@
 /*   By: emurbane <emurbane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 16:35:03 by emurbane          #+#    #+#             */
-/*   Updated: 2025/12/03 18:34:34 by emurbane         ###   ########.fr       */
+/*   Updated: 2025/12/05 16:06:34 by emurbane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,11 @@ void	error_exit(t_stack **stack);
 int		is_sorted(t_stack *stack);
 
 /* Utils */
-int	is_sorted(t_stack *stack);
+int		is_sorted(t_stack *stack);
 void	error_exit(t_stack **stack);
 void	free_stack(t_stack **stack);
 void	free_str_array(char **str);
+long	ft_atoibetter(const char *str);
 
 /* Operations */
 void	sa(t_stack **a);
@@ -57,6 +58,6 @@ void	simple_sort(t_stack **a, t_stack **b);
 void	index_stack(t_stack *stack);
 t_stack	*stack_new(int value);
 void	stack_add_back(t_stack **lst, t_stack *new);
-int	stack_size(t_stack *stack);
+int		stack_size(t_stack *stack);
 t_stack	*stack_last(t_stack *stack);
 #endif

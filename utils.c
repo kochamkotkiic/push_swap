@@ -6,7 +6,7 @@
 /*   By: emurbane <emurbane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 16:48:04 by emurbane          #+#    #+#             */
-/*   Updated: 2025/12/03 18:45:56 by emurbane         ###   ########.fr       */
+/*   Updated: 2025/12/05 16:08:45 by emurbane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,7 @@ void	free_stack(t_stack **stack)
 		*stack = tmp;
 	}
 }
+
 void	free_str_array(char **str)
 {
 	int	i;
@@ -55,4 +56,33 @@ void	free_str_array(char **str)
 		i++;
 	}
 	free(str);
+}
+
+long	ft_atoibetter(const char *str)
+{
+	long	res;
+	int		sign;
+	int		i;
+
+	res = 0;
+	sign = 1;
+	i = 0;
+	while (str[i] == ' ' || (str[i] >= 9 && str[i] <= 13))
+		i++;
+	if (str[i] == '-' || str[i] == '+')
+	{
+		if (str[i] == '-')
+			sign = -1;
+		i++;
+	}
+	if (!str[i])
+		return (2147483648LL);
+	while (str[i])
+	{
+		if (str[i] < '0' || str[i] > '9')
+			return (2147483648LL);
+		res = res * 10 + (str[i] - '0');
+		i++;
+	}
+	return (res * sign);
 }

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rev_rotate.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: emurbane <emurbane@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/05 15:57:02 by emurbane          #+#    #+#             */
+/*   Updated: 2025/12/05 15:57:14 by emurbane         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 // Shift down all elements of stack a by 1
 /*po petli last wskazuje na ostatni elem
@@ -22,6 +34,7 @@ void	rra(t_stack **a)
 	prev->next = NULL;
 	ft_putstr_fd("rra\n", 1);
 }
+
 // Shift down all elements of stack b by 1
 void	rrb(t_stack **b)
 {

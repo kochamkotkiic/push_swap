@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rotate.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: emurbane <emurbane@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/05 15:57:41 by emurbane          #+#    #+#             */
+/*   Updated: 2025/12/05 15:57:45 by emurbane         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 //Shift up all elements of stack a by 1.
 /*nowy poczatek to drugi
@@ -17,6 +29,7 @@ void	ra(t_stack **a)
 	tmp->next = NULL;
 	ft_putstr_fd("ra\n", 1);
 }
+
 //Shift up all elements of stack b by 1
 void	rb(t_stack **b)
 {

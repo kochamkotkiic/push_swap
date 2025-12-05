@@ -6,7 +6,7 @@
 /*   By: emurbane <emurbane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 16:36:48 by emurbane          #+#    #+#             */
-/*   Updated: 2025/12/04 16:17:23 by emurbane         ###   ########.fr       */
+/*   Updated: 2025/12/05 16:08:22 by emurbane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,20 @@
 
 static void	validate_and_add(t_stack **stack, char *str)
 {
-    long	num;
-    t_stack	*tmp;
+	long	num;
+	t_stack	*tmp;
 
-    num = ft_atoi(str);
-    if (num > INT_MAX || num < INT_MIN)
-        error_exit(stack);
-    tmp = *stack;
-    while (tmp)
-    {
-        if (tmp->value == (int)num)
-            error_exit(stack);
-        tmp = tmp->next;
-    }
-    stack_add_back(stack, stack_new((int)num));
+	num = ft_atoibetter(str);
+	if (num > INT_MAX || num < INT_MIN)
+		error_exit(stack);
+	tmp = *stack;
+	while (tmp)
+	{
+		if (tmp->value == (int)num)
+			error_exit(stack);
+		tmp = tmp->next;
+	}
+	stack_add_back(stack, stack_new((int)num));
 }
 
 void	init_stack(t_stack **stack, int argc, char **argv)
@@ -53,6 +53,7 @@ void	init_stack(t_stack **stack, int argc, char **argv)
 	}
 	index_stack(*stack);
 }
+
 //przypisujemy range(indeks) kazdeu elementowi
 void	index_stack(t_stack *stack)
 {

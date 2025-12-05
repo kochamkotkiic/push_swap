@@ -1,6 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   pushswap.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: emurbane <emurbane@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/05 16:06:47 by emurbane          #+#    #+#             */
+/*   Updated: 2025/12/05 16:07:16 by emurbane         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 // Swap the first 2 elements at the top of stack a.
-/*przesuwamy drugi element(a staje sie elemntem 2) na poczatek listy, element 1 jest w temp
+/*przesuwamy drugi element(a staje sie elemntem 2) na poczatek listy,
+element 1 jest w temp
 tmp wksauzuje na element 3(a(elemn2) next)
 element 2 wskazuje na element 1(tmp)
 */
@@ -16,6 +29,7 @@ void	sa(t_stack **a)
 	(*a)->next = tmp;
 	ft_putstr_fd("sa\n", 1);
 }
+
 // Swap the first 2 elements at the top of stack b
 void	sb(t_stack **b)
 {
@@ -36,6 +50,7 @@ void	ss(t_stack **a, t_stack **b)
 	sb(b);
 	ft_putstr_fd("ss\n", 1);
 }
+
 //Take the first element at the top of b and put it at the top of a.
 /*bierzemy do tmp poczatek b
 przesuwamyw skaznik pcozatku b na drugie elemnt
@@ -53,6 +68,7 @@ void	pa(t_stack **a, t_stack **b)
 	*a = tmp;
 	ft_putstr_fd("pa\n", 1);
 }
+
 //Take the first element at the top of a and put it at the top of b.
 void	pb(t_stack **a, t_stack **b)
 {

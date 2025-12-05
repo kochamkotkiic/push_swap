@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   sort.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: emurbane <emurbane@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/12/05 15:40:13 by emurbane          #+#    #+#             */
+/*   Updated: 2025/12/05 15:53:24 by emurbane         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "push_swap.h"
 
 static void	sort_3(t_stack **a)
@@ -30,12 +42,10 @@ static void	sort_3(t_stack **a)
 static void	sort_5(t_stack **a, t_stack **b)
 {
 	int	len;
-	int	min;
 
 	len = stack_size(*a);
 	while (len--)
 	{
-		min = 0;
 		if ((*a)->index == 0 || (*a)->index == 1)
 			pb(a, b);
 		else

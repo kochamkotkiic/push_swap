@@ -6,10 +6,9 @@
 /*   By: emurbane <emurbane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 16:35:42 by emurbane          #+#    #+#             */
-/*   Updated: 2025/12/04 16:03:03 by emurbane         ###   ########.fr       */
+/*   Updated: 2025/12/05 16:05:56 by emurbane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 
 #include "push_swap.h"
 
@@ -28,7 +27,7 @@ static void	check_args(int argc, char **argv)
 			error_exit(NULL);
 		while (argv[i][j])
 		{
-			if (!((argv[i][j] >= '0' && argv[i][j] <= '9') || \
+			if (!((argv[i][j] >= '0' && argv[i][j] <= '9') ||
 				argv[i][j] == ' ' || argv[i][j] == '-' || argv[i][j] == '+'))
 				error_exit(NULL);
 			j++;
