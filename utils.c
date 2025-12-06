@@ -6,7 +6,7 @@
 /*   By: emurbane <emurbane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/12/03 16:48:04 by emurbane          #+#    #+#             */
-/*   Updated: 2025/12/05 16:08:45 by emurbane         ###   ########.fr       */
+/*   Updated: 2025/12/06 15:01:26 by emurbane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	free_str_array(char **str)
 	free(str);
 }
 
-long	ft_atoibetter(const char *str)
+long long	ft_atoibetter(const char *str)
 {
 	long	res;
 	int		sign;

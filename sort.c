@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: emurbane <emurbane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/12/05 15:40:13 by emurbane          #+#    #+#             */
-/*   Updated: 2025/12/05 15:53:24 by emurbane         ###   ########.fr       */
+/*   Created: 2025/12/06 14:48:24 by emurbane          #+#    #+#             */
+/*   Updated: 2025/12/06 15:43:04 by emurbane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,23 +41,20 @@ static void	sort_3(t_stack **a)
 
 static void	sort_5(t_stack **a, t_stack **b)
 {
-	int	len;
+	int	size;
 
-	len = stack_size(*a);
-	while (len--)
+	size = stack_size(*a);
+	move_min_to_top(a, 0);
+	pb(a, b);
+	if (size == 5)
 	{
-		if ((*a)->index == 0 || (*a)->index == 1)
-			pb(a, b);
-		else
-			ra(a);
-		if (stack_size(*b) == 2)
-			break ;
+		move_min_to_top(a, 1);
+		pb(a, b);
 	}
 	sort_3(a);
 	pa(a, b);
-	pa(a, b);
-	if ((*a)->value > (*a)->next->value)
-		sa(a);
+	if (size == 5)
+		pa(a, b);
 }
 
 void	simple_sort(t_stack **a, t_stack **b)
@@ -73,6 +70,7 @@ void	simple_sort(t_stack **a, t_stack **b)
 		sort_5(a, b);
 }
 
+/* Reszta algorytmu bez zmian */
 void	radix_sort(t_stack **a, t_stack **b)
 {
 	int	i;
